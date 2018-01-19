@@ -1,0 +1,1 @@
+E:\Full Stack Dot Net\Class Videos\Day 10\GitExample\GitExample\bin\Debug\GitExample.exe.config
