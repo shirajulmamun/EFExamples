@@ -4,3 +4,6 @@ E:\Full Stack Dot Net\Class Videos\Day 10\GitExample\GitExample\bin\Debug\GitExa
 E:\Full Stack Dot Net\Class Videos\Day 10\GitExample\GitExample\obj\Debug\GitExample.csprojResolveAssemblyReference.cache
 E:\Full Stack Dot Net\Class Videos\Day 10\GitExample\GitExample\obj\Debug\GitExample.exe
 E:\Full Stack Dot Net\Class Videos\Day 10\GitExample\GitExample\obj\Debug\GitExample.pdb
+C:\Fuad\Training\GitExample\EFExamples\GitExample\bin\Debug\GitExample.exe.config
+C:\Fuad\Training\GitExample\EFExamples\GitExample\obj\Debug\GitExample.exe
+C:\Fuad\Training\GitExample\EFExamples\GitExample\obj\Debug\GitExample.pdb
