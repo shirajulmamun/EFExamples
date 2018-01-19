@@ -12,7 +12,10 @@ namespace GitExample
         {
             Student student = new Student();
             Console.Write("Student Add");
-
+            if(student!=null)
+            {
+                Console.WriteLine("Student Exists");
+            }
         }
     }
 }
