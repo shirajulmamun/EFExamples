@@ -50,6 +50,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatabaseContext\EcommerceDbContext.cs" />
+    <Compile Include="Migrations\201801200507583_InitialCreate.cs" />
+    <Compile Include="Migrations\201801200507583_InitialCreate.Designer.cs">
+      <DependentUpon>201801200507583_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801201016353_Product_Properties_Changed.cs" />
+    <Compile Include="Migrations\201801201016353_Product_Properties_Changed.Designer.cs">
+      <DependentUpon>201801201016353_Product_Properties_Changed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ProductRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -62,6 +71,14 @@
       <Project>{e92ad90f-e8b6-4e47-87bf-26b71cb89729}</Project>
       <Name>Ecommerce.Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201801200507583_InitialCreate.resx">
+      <DependentUpon>201801200507583_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801201016353_Product_Properties_Changed.resx">
+      <DependentUpon>201801201016353_Product_Properties_Changed.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
