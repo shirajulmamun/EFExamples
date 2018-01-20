@@ -13,6 +13,7 @@ namespace Ecommerce.Models.EntityModels
         public long? ParentId { get; set; }
         public ProductCategory Parent { get; set; }
 
-        public ICollection<ProductCategory> Childs { get; set; }
-    }
+        public virtual ICollection<ProductCategory> Childs { get; set; }
+        public virtual ICollection<Product> Products { get; set; }
+     }
 }

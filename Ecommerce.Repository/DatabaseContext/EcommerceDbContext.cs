@@ -10,6 +10,10 @@ namespace Ecommerce.Repository.DatabaseContext
 {
     public class EcommerceDbContext:DbContext
     {
+        public EcommerceDbContext()
+        {
+            Configuration.LazyLoadingEnabled = false;
+        }
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductCategory> ProductCategories { get; set; }
     }

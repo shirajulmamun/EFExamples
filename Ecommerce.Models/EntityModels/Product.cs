@@ -19,6 +19,6 @@ namespace Ecommerce.Models.EntityModels
         public double? SalesPrice { get; set; }
 
         public long? CategoryId { get; set; }
-        public ProductCategory Category { get; set; }
+        public virtual ProductCategory Category { get; set; }
     }
 }

@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace Ecommerce.Console
 {
@@ -13,27 +14,26 @@ namespace Ecommerce.Console
     {
         static void Main(string[] args)
         {
+            EcommerceDbContext db = new EcommerceDbContext();
 
-            ProductRepository repository = new ProductRepository();
+            var category = db.ProductCategories.FirstOrDefault(c => c.Id == 1);
 
-            var product = repository.GetById(3);
-            System.Console.WriteLine("Enter Product " + product.Name + ",s New Name: ");
-
-            product.Name =  System.Console.ReadLine();
-            product.CategoryId = 1;
-
-            bool isUpdated = repository.Update(product);
-
-
-            if(isUpdated)
-            {
-                System.Console.WriteLine("Updated Successfully!");
-            }
-            else
-            {
-                System.Console.WriteLine("Update Failed!");
-            }
-          
+            db.Entry(category).Collection(c => c.Products).Load();
+            db.Entry(category).Reference(c => c.Parent).Load();
+            
+            //foreach(var product in products)
+            //{
+            //    if(product.Category!=null)
+            //    {
+            //        System.Console.WriteLine("Name: " + product.Name + " Price: " + product.SalesPrice + " Category: " + product.Category.Name);
+            //    }
+            //    else
+            //    {
+            //        System.Console.WriteLine("Name: " + product.Name + " Price: " + product.SalesPrice + " Category: N/A");
+            //    }
+                
+            //} 
+            
 
             System.Console.ReadKey();
 
