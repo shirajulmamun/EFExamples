@@ -1,4 +1,5 @@
 ﻿using Ecommerce.Models.EntityModels;
+using Ecommerce.Repository;
 using Ecommerce.Repository.DatabaseContext;
 using System;
 using System.Collections.Generic;
@@ -12,12 +13,18 @@ namespace Ecommerce.Console
     {
         static void Main(string[] args)
         {
-            EcommerceDbContext db = new EcommerceDbContext();
-            var product = db.Products.FirstOrDefault(c => c.Id == 4);
 
+            ProductRepository repository = new ProductRepository();
+
+            var product = repository.GetById(3);
+            System.Console.WriteLine("Enter Product " + product.Name + ",s New Name: ");
+
+            product.Name =  System.Console.ReadLine();
             product.CategoryId = 1;
 
-            bool isUpdated = db.SaveChanges() > 0;
+            bool isUpdated = repository.Update(product);
+
+
             if(isUpdated)
             {
                 System.Console.WriteLine("Updated Successfully!");
