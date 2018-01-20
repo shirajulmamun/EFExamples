@@ -12,23 +12,17 @@ namespace Ecommerce.Console
     {
         static void Main(string[] args)
         {
-            ProductCategory productCategory = new ProductCategory()
-            {
-                Name = "Electronics"                
-            };
-
             EcommerceDbContext db = new EcommerceDbContext();
-            db.ProductCategories.Add(productCategory);
 
-            int rowAffected = db.SaveChanges();
+            // SELECT Name,Code FROM Products product WHERE product.Name LIKE '%h%'
 
-            if(rowAffected>0)
+            var retriveProducts = db.Products
+                            .Where(c => c.Name.ToLower().Contains("h"))
+                            .Select(c=>new { Name=c.Name,Code=c.Code});
+
+            foreach(var p in retriveProducts)
             {
-                System.Console.WriteLine("Product Added!");
-            }
-            else
-            {
-                System.Console.WriteLine("Could not add product!");
+                System.Console.WriteLine("Name: " + p.Name + " Code: " + p.Code);
             }
 
             System.Console.ReadKey();
