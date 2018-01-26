@@ -58,6 +58,10 @@
     <Compile Include="Migrations\201801201016353_Product_Properties_Changed.Designer.cs">
       <DependentUpon>201801201016353_Product_Properties_Changed.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801260541459_Product_ProductType_Add.cs" />
+    <Compile Include="Migrations\201801260541459_Product_ProductType_Add.Designer.cs">
+      <DependentUpon>201801260541459_Product_ProductType_Add.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ProductRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -78,6 +82,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801201016353_Product_Properties_Changed.resx">
       <DependentUpon>201801201016353_Product_Properties_Changed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801260541459_Product_ProductType_Add.resx">
+      <DependentUpon>201801260541459_Product_ProductType_Add.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
