@@ -1,5 +1,7 @@
-﻿using Ecommerce.BLL;
+﻿using AutoMapper;
+using Ecommerce.BLL;
 using Ecommerce.Models.EntityModels;
+using Ecommerce.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,12 +44,12 @@ namespace Ecommerce.Web.Controllers
 
         // POST: Product/Create
         [HttpPost]
-        public ActionResult Create(Product product)
+        public ActionResult Create(ProductEntryVM model)
         {
             try
             {
                 // TODO: Add insert logic here
-               
+                var product = Mapper.Map<Product>(model);
                 bool isAdded = _productManager.Add(product);
                 if(isAdded)
                 {

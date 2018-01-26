@@ -1,4 +1,7 @@
-﻿using System;
+﻿using AutoMapper;
+using Ecommerce.Models.EntityModels;
+using Ecommerce.Web.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,6 +16,11 @@ namespace Ecommerce.Web
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            Mapper.Initialize(cfg => {
+                cfg.CreateMap<ProductEntryVM, Product>();
+                cfg.CreateMap<Product, ProductEntryVM>();
+            });
         }
     }
 }
