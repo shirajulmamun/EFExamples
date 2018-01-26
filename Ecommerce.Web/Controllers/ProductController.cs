@@ -1,6 +1,5 @@
 ﻿using Ecommerce.BLL;
 using Ecommerce.Models.EntityModels;
-using Ecommerce.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +10,18 @@ namespace Ecommerce.Web.Controllers
 {
     public class ProductController : Controller
     {
+
+        ProductManager _productManager;
+        public ProductController()
+        {
+            _productManager = new ProductManager();
+
+        }
+
+        public ProductController(ProductManager productManager)
+        {
+            _productManager = productManager;
+        }
         // GET: Product
         public ActionResult Index()
         {
@@ -36,8 +47,8 @@ namespace Ecommerce.Web.Controllers
             try
             {
                 // TODO: Add insert logic here
-                ProductManager manager = new ProductManager();
-                bool isAdded = manager.Add(product);
+               
+                bool isAdded = _productManager.Add(product);
                 if(isAdded)
                 {
                     return RedirectToAction("Index");

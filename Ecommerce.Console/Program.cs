@@ -1,6 +1,5 @@
 ﻿using Ecommerce.Models.EntityModels;
-using Ecommerce.Repository;
-using Ecommerce.Repository.DatabaseContext;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
