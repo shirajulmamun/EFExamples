@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\BaseRepository.cs" />
     <Compile Include="DatabaseContext\EcommerceDbContext.cs" />
     <Compile Include="Migrations\201801200507583_InitialCreate.cs" />
     <Compile Include="Migrations\201801200507583_InitialCreate.Designer.cs">
@@ -63,6 +64,7 @@
       <DependentUpon>201801260541459_Product_ProductType_Add.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="ProductCategoryRepository.cs" />
     <Compile Include="ProductRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

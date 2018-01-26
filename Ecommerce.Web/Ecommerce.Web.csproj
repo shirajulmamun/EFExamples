@@ -164,13 +164,13 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Ecommerce.BLL\Ecommerce.BLL.csproj">
+      <Project>{22B6E953-92FC-4502-B077-C4D2DEF0F963}</Project>
+      <Name>Ecommerce.BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Ecommerce.Models\Ecommerce.Models.csproj">
       <Project>{E92AD90F-E8B6-4E47-87BF-26B71CB89729}</Project>
       <Name>Ecommerce.Models</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Ecommerce.Repository\Ecommerce.Repository.csproj">
-      <Project>{62ea8acb-bcd5-4b27-9bad-843703445418}</Project>
-      <Name>Ecommerce.Repository</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

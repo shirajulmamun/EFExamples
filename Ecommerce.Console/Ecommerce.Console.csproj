@@ -60,13 +60,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Ecommerce.BLL\Ecommerce.BLL.csproj">
+      <Project>{22b6e953-92fc-4502-b077-c4d2def0f963}</Project>
+      <Name>Ecommerce.BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Ecommerce.Models\Ecommerce.Models.csproj">
       <Project>{e92ad90f-e8b6-4e47-87bf-26b71cb89729}</Project>
       <Name>Ecommerce.Models</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Ecommerce.Repository\Ecommerce.Repository.csproj">
-      <Project>{62ea8acb-bcd5-4b27-9bad-843703445418}</Project>
-      <Name>Ecommerce.Repository</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
